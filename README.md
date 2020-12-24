@@ -1,2 +1,2 @@
 # zabbix-rproxy-certificates
-Monitor rproxy certficates with zabbix
+Monitor rproxy certificates with zabbix
