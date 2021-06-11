@@ -5,7 +5,7 @@ CERTPATH=${2}
 CERTNAME=${3}
 
 function discovery(){
-    mapfile -t ARRAY < <(grep -rPo '^SSLCertificateFile \K(.*?)$' /ideosante/services/httpd-rp/conf/reverse/01-httpd-ssl.conf | cut -d'"' -f 2)
+    mapfile -t ARRAY < <(grep -rPo '^SSLCertificateFile \K(.*?)$' <PATH_TO_SSL.CONF> | cut -d'"' -f 2)
     # Split each elements because there are no multimensions arrays in BASH
     for INDEX in ${ARRAY[@]} 
     do
